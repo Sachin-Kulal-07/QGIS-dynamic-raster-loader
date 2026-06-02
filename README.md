@@ -13,7 +13,8 @@ When working with large-scale geographic projects (e.g., thousands of high-resol
 Instead of loading the heavy imagery directly, this tool uses a lightweight vector tile index (polygon boundary grid) as a proxy. The underlying `.qml` style embeds two robust Python-based actions directly into the QGIS user interface:
 1. **Load Image:** Dynamically locates the file path from the feature attributes, creates a valid `QgsRasterLayer`, bundles it into a dedicated `"PS group"` layer tree, and loads it into the map canvas on demand.
 2. **Remove Image:** Instantly unloads the specific raster layer from both the workspace tree and memory caching when visualization is no longer required.
-
+3. **Load Selected Image:** Instantly loads the selected raster layers from local file path to the QGIS canvas.
+   
 ---
 
 ## 🛠️ Key Technical Features
